@@ -1,0 +1,47 @@
+import React from 'react';
+import { View, Text } from 'react-native';
+import AppNavigator from './navigation/AppNavigator';
+
+export default function App() {
+  return <AppNavigator />;
+}
+import { createStackNavigator } from '@react-navigation/stack';
+import LoginScreen from '../screens/LoginScreen';
+import HomeScreen from '../screens/HomeScreen';
+
+const Stack = createStackNavigator();
+
+export default function AppNavigator() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Login" component={LoginScreen} />
+      <Stack.Screen name="Home" component={HomeScreen} />
+    </Stack.Navigator>
+  );
+}
+import React, { useState } from 'react';
+import { Button, TextInput } from 'react-native';
+
+export default function LoginScreen() {
+  const [email, setEmail] = useState('');
+  
+  return (
+    <>
+      <TextInput 
+        placeholder="Email" 
+        value={email} 
+        onChangeText={setEmail} 
+      />
+      <Button title="Login" onPress={() => {}} />
+    </>
+  );
+}
+{
+  "name": "PinkVilla",
+  "dependencies": {
+    "react": "18.2.0",
+    "react-native": "0.72.0",
+    "@react-navigation/native": "^6.1.0",
+    "@react-native-firebase/app": "^17.0.0"
+  }
+}
