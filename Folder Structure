@@ -1,0 +1,11 @@
+PinkVilla/
+├── android/           (Android-specific files)
+├── ios/               (iOS files - can be empty if Android-only)
+├── src/               (ALL your app code goes here)
+│   ├── components/    (Reusable UI elements)
+│   ├── screens/       (App pages)
+│   ├── services/      (Firebase, APIs)
+│   ├── utils/         (Helper functions)
+│   └── App.js         (Main app entry)
+├── package.json       (Lists all dependencies)
+└── README.md          (Setup instructions)
